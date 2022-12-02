@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h1>Cálculo com Função SE Composta</h1><br>
+    <div id="calculo"></div>
+    <div id="calculo1"></div>
+    <script>
+        let pedido = prompt("Digite a opção que deseja para fazer seu pedido.\nMenu:\n1. Big Super Sanduba\n2. Quase Super Sanduba\n3. Mirradus Sanduba");
+
+    let resul;
+        if (pedido == 1){
+                resul = "1. Big Super Sanduba - 2 Hambúrgueres, Queijo, Batata Frita e Refrigerante - R$5,00";
+        }else if (pedido == 2){
+                resul = "2. Quase Super Sanduba - 1 Hambúrguer, Batata Frita e Refrigerante - R$3,00";
+        }else if (pedido == 3){
+                resul = "3. Mirradus Sanduba - 1 Misto Quente e Refrigerante - R$1,50";
+        }
+        document.getElementById("calculo1").innerHTML = resul;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <h1>Cálculo com Função SE Composta</h1><br>
+    <div id="calculo"></div>
+    <div id="calculo1"></div>
+    <script>
+        let nome = prompt("Digite o nome do aluno.");
+        let nota1 = Number(prompt("Digite a primeira nota do Aluno."));
+        let nota2 = Number(prompt("Digite a segunda nota do Aluno."));
+        let nota3 = Number(prompt("Digite a terceira nota do Aluno."));
+        let notamedia = (nota1 + nota2 + nota3) / Number(3);
+        let notamediaminima = 6;
+        let msgresul;
+
+        if (notamedia > notamediaminima){
+        msgresul = "O aluno " + nome + " foi aprovado (média maior ou igual a 6,0)" + "<br>O aluno " + nome + " foi aprovado com média " + notamedia;
+    }else{
+        if (notamedia == notamediaminima){
+        msgresul = "O aluno " + nome + " foi aprovado (média maior ou igual a 6,0)" + "<br>O aluno " + nome + " foi aprovado com média " + notamedia;
+        }else{
+        msgresul = "O aluno " + nome + " foi reprovado (média inferior a 6,0)" + "<br>O aluno " + nome + " foi reprovado com média " + notamedia;
+        }
+    }
+    document.getElementById("calculo").innerHTML = msgresul;
+
+    let resul;
+        if (nota1 > nota2 && nota1 > nota3){
+            if (nota2 > nota3){
+                resul = nota1 + "<br>" + nota2 + "<br>" + nota3;
+            }else{
+                resul = nota1 + "<br>" + nota3 + "<br>" + nota2;
+            }
+        }else if (nota2 > nota1 && nota2 > nota3){
+            if (nota1 > nota3){
+                resul = nota2 + "<br>" + nota1 + "<br>" + nota3;
+            }else{
+                resul = nota2 + "<br>" + nota3 + "<br>" + nota1;
+            }
+        }else if (nota3 > nota1 && nota3 > nota2){
+            if (nota1 > nota2){
+                resul = nota3 + "<br>" + nota1 + "<br>" + nota2;
+            }else{
+                resul = nota3 + "<br>" + nota2 + "<br>" + nota1;
+            }
+        }else{
+            resul = nota3 + "<br>" + nota2 + "<br>" + nota1;
+        }
+        document.getElementById("calculo1").innerHTML = resul;
+
+    </script>
+</body>
+</html>

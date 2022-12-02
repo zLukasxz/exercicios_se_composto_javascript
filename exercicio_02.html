@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <h1>Cálculo com Função SE Composta</h1><br>
+    <div id="calculo"></div>
+    <div id="calculo1"></div>
+    <script>
+        let nome1 = prompt("Digite o nome da primeira pessoa.");
+        let peso1 = Number(prompt("Digite o peso da primeira pessoa."));
+        let nome2 = prompt("Digite o nome da segunda pessoa.");
+        let peso2 = Number(prompt("Digite o peso da segunda pessoa."));
+        let nome3 = prompt("Digite o nome da terceira pessoa.");
+        let peso3 = Number(prompt("Digite o peso da terceira pessoa."));
+        let nomepeso1 = nome1 + ": " + peso1 + "kg";
+        let nomepeso2 = nome2 + ": " + peso2 + "kg";
+        let nomepeso3 = nome3 + ": " + peso3 + "kg";
+
+    let resul;
+        if (peso1 > peso2 && peso1 > peso3){
+            if (peso2 > peso3){
+                resul = nomepeso1 + "<br>" + nomepeso2 + "<br>" + nomepeso3;
+            }else{
+                resul = nomepeso1 + "<br>" + nomepeso3 + "<br>" + nomepeso2;
+            }
+        }else if (peso2 > peso1 && peso2 > peso3){
+            if (peso1 > peso3){
+                resul = nomepeso2 + "<br>" + nomepeso1 + "<br>" + nomepeso3;
+            }else{
+                resul = nomepeso2 + "<br>" + nomepeso3 + "<br>" + nomepeso1;
+            }
+        }else if (peso3 > peso1 && peso3 > peso2){
+            if (peso1 > peso2){
+                resul = nomepeso3 + "<br>" + nomepeso1 + "<br>" + nomepeso2;
+            }else{
+                resul = nomepeso3 + "<br>" + nomepeso2 + "<br>" + nomepeso1;
+            }
+        }else{
+            resul = nomepeso3 + "<br>" + nomepeso2 + "<br>" + nomepeso1;
+        }
+        document.getElementById("calculo1").innerHTML = resul;
+
+    </script>
+</body>
+</html>

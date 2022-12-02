@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+    <h1>Cálculo com Função SE Composta</h1><br>
+    <div id="calculo"></div>
+    <div id="calculo1"></div>
+    <script>
+        let dia = prompt("Digite o dia.\nApenas números");
+        let mes = prompt("Digite o mês.\nApenas números");
+        let ano = prompt("Digite o ano.\nApenas números");
+
+    let resul;
+        if (mes == 1){
+                resul = dia + " de Janeiro de " + ano;
+        }else if (mes == 2){
+                resul = dia + " de Fevereiro de " + ano;
+        }else if (mes == 3){
+                resul = dia + " de Março de " + ano;
+        }else if (mes == 4){
+                resul = dia + " de Abril de " + ano;
+        }else if (mes == 5){
+                resul = dia + " de Maio de " + ano;
+        }else if (mes == 6){
+                resul = dia + " de Junho de " + ano;
+        }else if (mes == 7){
+                resul = dia + " de Julho de " + ano;
+        }else if (mes == 8){
+                resul = dia + " de Agosto de " + ano;
+        }else if (mes == 9){
+                resul = dia + " de Setembro de " + ano;
+        }else if (mes == 10){
+                resul = dia + " de Outubro de " + ano;
+        }else if (mes == 11){
+                resul = dia + " de Novembro de " + ano;
+        }else if (mes == 12){
+                resul = dia + " de Dezembro de " + ano;
+        }
+        document.getElementById("calculo1").innerHTML = resul;
+
+    </script>
+</body>
+</html>
